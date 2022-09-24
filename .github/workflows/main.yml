@@ -1,0 +1,20 @@
+
+name: CI
+
+on:
+  workflow_dispatch:
+
+build-job:
+    stage: build
+    script: -python -v
+    
+test-job1:
+    stage: test
+    script:
+      - python hello.py
+    
+deploy-prod:
+    stage: deploy
+    script: 
+      echo "Fim"
+  
